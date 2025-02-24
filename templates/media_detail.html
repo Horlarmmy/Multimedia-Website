@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ media.title }}</title>
+</head>
+<body>
+    <h1>{{ media.title }}</h1>
+    <p>{{ media.description }}</p>
+    {% if media.media_type == "image" %}
+        <img src="{{ media.file.url }}" width="400">
+    {% elif media.media_type == "video" %}
+        <video width="400" controls>
+            <source src="{{ media.file.url }}" type="video/mp4">
+        </video>
+    {% elif media.media_type == "audio" %}
+        <audio controls>
+            <source src="{{ media.file.url }}" type="audio/mpeg">
+        </audio>
+    {% endif %}
+    <br>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

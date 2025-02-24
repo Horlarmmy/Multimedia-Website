@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multimedia Gallery</title>
+</head>
+<body>
+    <h1>Multimedia Gallery</h1>
+    <a href="{% url 'upload_media' %}">Upload New Media</a>
+    <ul>
+        {% for media in media_files %}
+            <li>
+                <a href="{% url 'media_detail' media.id %}">{{ media.title }}</a> - {{ media.media_type }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

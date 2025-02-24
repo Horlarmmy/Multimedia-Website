@@ -1,0 +1,16 @@
+#python files
+*.pyc
+*.pyo
+*.pyd
+/media/
+#django files
+*.sqlite3
+*.pyc
+__pycache__/
+#pycharm files
+.idea/
+*.iml
+*.iws
+*.ipr
+*/migrations/
+#pyc files
