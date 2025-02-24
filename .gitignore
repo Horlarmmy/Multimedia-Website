@@ -2,7 +2,6 @@
 *.pyc
 *.pyo
 *.pyd
-/media/
 #django files
 *.sqlite3
 *.pyc
